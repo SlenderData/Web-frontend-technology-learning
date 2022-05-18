@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		//创建数组
+		//let 数组名称 = new Array(size);
+		//数组的第一种声明方式
+		let arry = new Array();
+		arry.push("apple");
+		arry.push("orange");
+		arry.push("peach");
+		arry.push("banana");
+		console.log(arry.length);
+		console.log(arry[0]);
+		console.log(arry.join("-"));
+		console.log(arry.sort());
+		//数组的第二种声明方式
+		let fruit = ["apple", "orange", "peach", "banana"];
+		//数组的遍历
+		for (let i = 0; i < fruit.length; i++) {
+			console.log(fruit[i]);
+		}
+	</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>使用CSS3结构伪类选择器</title>
+		<style>
+		/* 	选择器	功能描述
+			E:first-child	作为父元素的第一个子元素的元素E
+			E:last-child	作为父元素的最后一个子元素的元素E
+			E F:nth-child(n)	选择父级元素E的第n个子元素F，（n可以是1、2、3），关键字为even、odd
+			E:first-of-type	选择父元素内具有指定类型的第一个E元素
+			E:last-of-type	选择父元素内具有指定类型的最后一个E元素
+			E F:nth-of-type(n)	选择父元素内具有指定类型的第n个F元素 */
+			/*ul的第一个子元素*/
+			ul li:first-child {
+				background: red;
+			}
+
+			/*ul的最后一个子元素*/
+			ul li:last-child {
+				background: green;
+			}
+
+			/*body下面的第2个p元素*/
+			/*p:nth-child(2){*/
+			/*background: yellow;*/
+			/*}*/
+			/*选择到父级里的第一子元素p*/
+			/* 查找 body 标签下的第一个元素 如果是P标签，颜色是黄色 */
+			body p:nth-child(1) {
+				background: yellow;
+			}
+			
+			/* 查找body 标签下面的P标签 第一个p */
+			body p:nth-of-type(1){
+				background: yellow;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h2>结构伪类选择器</h2>
+		<p>p11111111111111111111111</p>
+		<p>p22222222222222222222222</p>
+		<p>p33333333333333333333333</p>
+		<ul>
+			<li>li11111111111111111111</li>
+			<li>li22222222222222222222</li>
+			<li>li33333333333333333333</li>
+		</ul>
+	</body>
+</html>
