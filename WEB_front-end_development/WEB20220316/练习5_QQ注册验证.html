@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ注册</title>
+	</head>
+	<body>
+		<img src="img/bg_chs.png" />
+		<form action="result.html" method="post">
+			<h3>注册账号</h3>
+			<table>
+				<tr>
+					<td>昵称</td>
+					<td><input type="text" name="nick" id="nick" required pattern="[-\w\u4E00-\u9FA5]{4,10}" /></td>
+					<td>长度为4-10个字符</td>
+				</tr>
+				<tr>
+					<td>密码</td>
+					<td><input type="password" name="psw" id="psw" required pattern="[\dA-Za-z]{6,16}" /></td>
+					<td>长度为6-16个字符</td>
+				</tr>
+				<tr>
+					<td>确认密码</td>
+					<td><input type="password" name="psw1" id="psw1" required pattern="[\dA-Za-z]{6,16}"/></td>
+					<td>长度为6-16个字符</td>
+				</tr>
+				<tr>
+					<td>手机号码</td>
+					<td><input type="tel" name="tel" id="tel" required pattern="1[3578]\d{9}"/></td>
+					<td>号码长度为11位，以13|5|7|8开头</td>
+				</tr>
+				<tr>
+					<td>邮箱</td>
+					<td><input type="email" name="email" id="email" required/></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>年龄</td>
+					<td><input type="text" name="age" id="age" required pattern="\d|[1-9]\d|1[0-2]\d"/></td>
+					<td></td>
+				</tr>
+			</table>
+			<input type="image" src="img/btn.bmp" />
+		</form>
+	</body>
+</html>

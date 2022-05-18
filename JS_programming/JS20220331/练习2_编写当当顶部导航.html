@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>当当网我的订单页</title>
+		<link type="text/css" rel="stylesheet" href="css/dangdang.css">
+	</head>
+	<body>
+		<div id="menu" onmouseover="showUL()" onmouseout="hideUL()" class="pos">
+			<a href="#">我的当当</a>
+			<ul id="menu-ul">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">我的收藏</a></li>
+				<li><a href="#">我的礼品卡</a></li>
+				<li><a href="#">我的积分</a></li>
+				<li><a href="#">我的余额</a></li>
+			</ul>
+		</div>
+		<style type="text/css">
+			.ulborder {
+				border: 1px solid #EE7304;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(function() {
+				// 六字箴言 找到它$(selector)，操作它.action()
+				$("#menu-ul").hide();
+			});
+
+			function showUL() {
+				$("#menu").addClass("ulborder");
+				$("#menu-ul").show();
+			}
+
+			function hideUL() {
+				$("#menu").removeClass("ulborder");
+				$("#menu-ul").hide();
+			}
+		</script>
+	</body>
+</html>

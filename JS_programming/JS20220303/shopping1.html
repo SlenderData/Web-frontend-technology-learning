@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>制作简易的当当购物车页面</title>
+		<link type="text/css" rel="stylesheet" href="css/cartStyle.css" />
+	</head>
+	<body>
+
+		<div class="content">
+			<div class="logo">
+				<img src="img/dd_logo.jpg"><span onclick="wclose()">关闭</span>
+			</div>
+			<div class="cartList">
+				<ul>
+					<li>移入收藏</li>
+					<li onclick="del()">删除</li>
+					<li>移入收藏</li>
+					<li>删除</li>
+					<li><span onclick="accounts()">结 算</span></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function wclose() {
+			window.close(); //关闭浏览器窗口
+		}
+
+		function del() {
+			let flag = confirm("确定要删除吗？");
+			if (flag) {
+				window.alert("删除成功");
+			} else {
+				window.alert("取消删除");
+			}
+		}
+
+		function accounts() {
+			var flag = confirm("您本次购买的商品信息如下：\n\n商品名称：白岩松：白说、岛上书店；\n商品数量：2件；\n商品总计：46.00；\n运费：0元；\n\n请确认以上信息是否有误！！！");
+			if (flag) {
+				alert("您的订单已提交");
+			}
+		}
+	</script>
+</html>

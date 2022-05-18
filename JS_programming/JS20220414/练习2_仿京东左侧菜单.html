@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>仿京东左侧菜单</title>
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="nav-box">
+			<div class="nav-top"><a href="">全部商品分类</a></div>
+			<ul>
+				<li>
+					<a href="">家用电器</a>
+					<div><img src="img/erji.jpg" /></div>
+				</li>
+				<li>
+					<a href="">手机</a>、<a href="">数码</a>、<a href="">京东通信</a>
+					<div><img src="img/erji1.jpg" /></div>
+				</li>
+				<li>
+					<a href="">电脑</a>、<a href="">办公</a>
+					<div><img src="img/erji2.jpg" /></div>
+				</li>
+				<li>
+					<a href="">家居</a>、<a href="">家具</a>、<a href="">家装</a>、<a href="">厨具</a>
+					<div><img src="img/erji3.jpg" /></div>
+				</li>
+				<li>
+					<a href="">男装</a>、<a href="">女装</a>、<a href="">珠宝</a>
+					<div><img src="img/erji4.jpg" /></div>
+				</li>
+			</ul>
+		</div>
+		<style type="text/css">
+			.orange {
+				background-color: orange;
+			}
+		</style>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// show() 控制元素的显示，hide( )控制元素的隐藏				// $(selector).show([speed],[callback])				// $(selector).hide([speed],[callback])				// fadeIn()和fadeOut()可以通过改变元素的透明度实现淡入淡出效果				// $(selector).fadeIn([speed],[callback])				// $(selector).fadeOut([speed],[callback])				// slideDown() 可以使元素逐步延伸显示				// slideUp()则使元素逐步缩短直至隐藏				// $(selector).slideUp ([speed],[callback])				// $(selector).slideDown ([speed],[callback])
+				$("ul>li").hover(function() {
+					let index = $("ul>li").index(this);
+					$("ul li:eq(" + index + ") div").show();
+					$("ul li:eq(" + index + ")").toggleClass("orange");
+				}, function() {
+					let index = $("ul>li").index(this);
+					$("ul li:eq(" + index + ") div").hide();
+					$("ul li:eq(" + index + ")").toggleClass("orange");
+				});
+			});
+		</script>
+	</body>
+</html>

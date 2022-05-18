@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<style type="text/css">
+		#div1 {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			/* 默认的定位 static */
+			position: static;
+		}
+
+		#div2 {
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			/* position: relative; */
+			/* 相对自身原来的位置进行偏移
+			偏移设置：top、left、right、bottom
+			相对定位的盒子仍在标准文档流中
+			相对定位的盒子原来的位置会被保留下来 */
+			left: 50px;
+			top: 50px;
+		}
+
+		#div3 {
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+			/* 绝对的定位 */
+			position: absolute;
+			/* 偏移设置：top、left、right、bottom
+			以它最近的一个“已经定位”的“祖先元素”为基准进行偏移
+			会以浏览器窗口进行定位 */
+			left: 50px;
+			top: 50px;
+		}
+
+		#all {
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+			position: relative;
+		}
+	</style>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="all">
+			<div id="div3"></div>
+		</div>
+	</body>
+</html>
